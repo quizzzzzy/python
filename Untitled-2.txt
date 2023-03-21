@@ -1,0 +1,26 @@
+class Pan:
+    def __init__(self, diameter=20):
+        self.material = "cast_iron"
+        self.diameter = diameter
+        self.dirt = 0
+
+    def fry(self):
+        print("жарю")
+
+    def clean(self):
+        print("я чистая")
+        self.dirt = 0
+
+    def get_dirty(self):
+        self.dirt += 10 
+        print("эта сковорода испачкана на", self.dirty)
+
+
+p1 = Pan(diameter=500)
+p1.get_dirty()
+p1.get_dirty()
+p1.clean()
+print("я супер чистая")
+)
+
+
