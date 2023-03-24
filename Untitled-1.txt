@@ -1,0 +1,41 @@
+class Humanoid:
+    def __init__(self):
+        print(" Я создан чтоб побеждать")
+        self.hp = 100
+        self.name = "Вася Питонов"
+        self.damage = 70
+        self.mana = 100
+        self.armour = 100
+        self.money = 600
+
+    def buy_items(self):
+        print("Добро пожаловать в таверну, тут вы можете купить предметы чтоб легче было выигрывать", money, "монет")
+        list = ["1 - фласка", "2 - манго", "3 - танго", "4 - птшка", "5 - нулик", "6 - кларити", "7 - топорик(150)", "8 - щит(200)", "9 - супер пупер меч(10000)"]
+        print("перед вами находятся предметы которые находятся в", list_1)
+        list_2 = "1 - купить предмет, 2 -выйти, 3 -поставить игру на паузу"
+        choise = input("выберете действие:" list_2)
+        if choise == 1:
+            print("перед вами находятся предметы которые находятся в", list_1)
+            buy_choise = input("что вы хотите купить")
+            if buy_choise == 1:
+                self.money -= 100
+                self.inventory,append("кларити")
+                print('вы успешно купили кларити')
+            if 
+
+            
+            
+            
+            elif choise == 2:
+                pass
+            
+
+
+
+    
+    class Warlous(Humanoid):
+         
+
+
+
+player = Humanoid(name ="Вася Питонов" hp = 100, damage = 70, mana = 100, armour = 100, money = 600)
