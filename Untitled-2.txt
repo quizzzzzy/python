@@ -1,26 +1,28 @@
-class Pan:
-    def __init__(self, diameter=20):
-        self.material = "cast_iron"
-        self.diameter = diameter
-        self.dirt = 0
+class ATM:
 
-    def fry(self):
-        print("жарю")
+    last_id = 0  # классовый атрибут
+    atms = []
+    @classmethod
+    def count_atms(cls):
+        print(len(cls.atms))
 
-    def clean(self):
-        print("я чистая")
-        self.dirt = 0
+    def __init__(self,):  #экземплярный метод
+        self.id = ATM.last_id  # экземплярный атрибут
+        self._total = 0
+        ATM.last_id += 1
+        ATM.atms.append(self)
 
-    def get_dirty(self):
-        self.dirt += 10 
-        print("эта сковорода испачкана на", self.dirty)
+    def deposit(self, money):
+        self.total += money
+        print(f"вы вложили {money}, теперь на счёте {self._total}")
 
+    def withdraw(self, money):
+        self._total -= money
+        print(f"вы сняли {money}, теперь на счёте {self._total}")
 
-p1 = Pan(diameter=500)
-p1.get_dirty()
-p1.get_dirty()
-p1.clean()
-print("я супер чистая")
-)
+atm1 = ATM(1)
+atm2 = ATM(2)
 
-
+print(atm1.id)
+print(atm2.id)
+print(ATM.atms)
