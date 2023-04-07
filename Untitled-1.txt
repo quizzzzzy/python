@@ -1,36 +1,20 @@
-class Father:
-    def __init__(self):
-        self.name = "отец"
-        self.tools = []
+class Car:  # класс
+    def __init__(self):  # конструктор класса, вызывается при рождении 
+        self.is_clear = True  # атрибут экземпляра
+        print(" машина сделана")
+    
+    def start_engine(self):  # метод экземпляра
+        print("p-p-p-p-!")
 
-    def weekend(self):
-        print("заливаем бетон")
-
-class Son(Father):
-    def __init__(self):
-        super()
-        self.name = "сын"
-
-    def weekend(self):
-        print("копать огород")
+    def wash(self):
+        self.is_clear = True
+        print("машина чистая")
 
 
-father = Father()
-son = Son()
-
-father.weekend()
-son.weekend()
-
-print(father.tools)
-print(son.tools)
-
-
-class Mother:
-    def __init__(self):
-        self.name = "мама"
-        self.patience = 100
-    def weekend(self):
-        print("читать ужасы")
-
-
-
+lastochka = Car()  # создание экземпляра класса
+sokol = Car()
+print(lastochka.is_clear)
+sokol.is_clear = True
+print(sokol.is_clear)
+sokol.wash()
+sokol.is_clear = False
